@@ -47,7 +47,7 @@ public class EnderecoIP {
     }
 
     public int getTotalIPs() {
-        return (cidr == 32) ? 1 : (int) Math.pow(2, 32 - cidr);
+        return (cidr == 32) ? 1 : (int) Math.pow(2, 32 - cidr) - 2;
     }
 
     public EnderecoIP criarSubrede(int novoCIDR) {
@@ -78,4 +78,8 @@ public class EnderecoIP {
             }
         }
     }
+    
+    
+    
+    
 }
